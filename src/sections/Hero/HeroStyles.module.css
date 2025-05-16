@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  height: 90vh;
+  min-height: 500px;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  will-change: background-color, color;
+}
+
+.container .hero {
+  max-width: 30vw;
+}
+
+.container span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.container span a {
+  margin: 0;
+}
+
+.container span a img {
+  width: 30px;
+}
+
+.container a {
+  width: fit-content;
+  align-self: center;
+}
+
+.container button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out, transform 200ms ease-in-out;
+  will-change: background-color, color, box-shadow;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+}
+
+.container button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 24ch;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info h1,
+.info h2,
+.info p {
+  transition: color 1s ease-in-out;
+  will-change: color;
+}
+
+@media (width >= 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-content: center;
+    gap: 200px;
+  }
+
+  .container .hero {
+    max-width: 350px;
+    width: 350px;
+  }
+}
+
+@media (width >= 1400px) {
+  .container .hero {
+    max-width: 400px;
+    width: 400px;
+  }
+}
